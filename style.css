@@ -1,0 +1,207 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --primary__red:hsl(0,100%,74%);
+    --primary__green:hsl(154,59%,54%);
+    --neutral__blue:hsl(248,32%,49%);
+    --accent__blue-dark:hsl(249,10%,26%);
+    --accent__blue-gray:hsl(246,25%,77%);
+}
+body{
+    font-size:16px;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('images/bg-intro-mobile.png');
+    background-color:var(--primary__red);
+}
+.container{
+    padding: 2em 1em;
+}
+.row{
+    width:90%;
+    max-width:1660px;
+    margin: 0 auto;
+}
+.content{
+    padding: 1em 0;
+}
+.intro__content{
+    color:white;
+    margin-bottom: 1em;
+    text-align: center;
+}
+h1.intro__content-heading{
+    font-size:1.3rem;
+    line-height:1.3;
+    font-weight: 600;
+    padding: 0.5em 0;
+}
+p.intro__content-text{
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 0.5em 1.5em;
+    font-weight: 300;
+}
+.trial__content{
+    margin-bottom: 1em;
+}
+h2.trial__content-heading{
+    text-align: center;
+    font-size: 0.9rem;
+    background-color: var(--neutral__blue);
+    color:white;
+    padding: 1em 0;
+    font-weight: 400;
+    margin: 1em;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px var(--accent__blue-dark) ;
+}
+.special__text{
+    font-weight: 300;
+}
+.monthly{
+    font-weight: 300;
+    display: block;
+    width:60%;
+    margin: 0 auto;
+}
+form{
+    background-color: white;
+    padding:1em;
+    margin:  1em;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px var(--accent__blue-dark);
+}
+form >div{
+    margin-bottom: 1em;
+}
+form input{
+    padding:0.5em 1em;
+    width:100%;
+    border:1px solid var(--accent__blue-gray);
+    border-radius: 5px;
+}
+form input:focus{
+    outline: none;
+    border:2px solid var(--primary__red); 
+}
+
+form input::placeholder{
+    color:var(--accent__blue-gray);
+    font-weight: 600;
+}
+form button[type="submit"]{
+    display:block;
+    width:100%;
+    font-size:1rem;
+    padding:1em ;
+    text-transform: uppercase;
+    background-color: var(--primary__green);
+    text-align: center;
+    outline:none;
+    border:none;
+    color: white;
+    border-radius:2px;
+    box-shadow: 2px 2px 2px var(--accent__blue-gray);
+}
+form button[type="submit"]:hover{
+    cursor:pointer;
+}
+p.agree__msg{
+    font-size:0.7rem;
+    text-align: center;
+    color:var(--accent__blue-gray);
+}
+p.agree__msg a{
+    text-decoration: none;
+    color:var(--primary__red);
+}
+/*media queries*/
+
+@media screen and (min-width:567px){
+    h1.intro__content-heading{
+        font-size: 1.5rem;
+    }
+    p.intro__content-text{
+        font-size:1rem;
+    }
+    p.agree__msg{
+        font-size:0.8rem;
+    }
+}
+@media screen and (min-width:768px){ 
+     body{
+         font-size:18px;
+     }
+    .content{
+        display: flex;
+        align-items: center;
+        padding:2em;
+    }
+    .intro__content{
+        flex:1 1 50%;
+    }
+    .trial__content{
+        flex:1 1 50%;
+    }
+    .monthly{
+        display: inline;
+    }
+   h1.intro__content-heading{
+        font-size: 1.8rem;
+    }
+    p.intro__content-text{
+        font-size:1.1rem;
+        padding-left:0;
+    }
+    h2.trial__content-heading,form{
+        margin: 1em 0;
+    }
+    p.agree__msg{
+        font-size:0.9rem;
+    }
+}
+
+@media screen and (min-width:990px){
+    body{
+         font-size:20px;
+         background-image: url('images/bg-intro-desktop.png');
+     }
+     .content{
+         padding:4em 2em;
+     }
+     .intro__content{
+         padding:2em;
+         text-align: left;
+     }
+      .intro__content{
+        flex:1 1 55%;
+    }
+    .trial__content{
+        flex:1 1 45%;
+    }
+     h1.intro__content-heading{
+        font-size: 2.2rem;
+    }
+    p.intro__content-text{
+        font-size:1.3rem;
+    }
+     h2.trial__content-heading{
+        font-size:1.1rem;
+        
+    }
+    form{
+        padding:2em;
+    }
+    form input{
+        padding:0.75em;
+    }
+    p.agree__msg{
+        font-size:1rem;
+    }
+}
